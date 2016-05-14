@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialog xsi:noNamespaceSchemaLocation="WatsonDialogDocument_1.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <flow>
+        <folder label="Main">
+            <output>
+                <prompt selectionType="RANDOM">
+                    <item>Hello! I am ZenBot, Your personal banking assistant. How may I help you today? </item>
+                </prompt>
+                <goto ref="getUserInput_2449614"/>
+            </output>
+            <getUserInput id="getUserInput_2449614">
+                <search ref="folder_2449611"/>
+                <default>
+                    <output>
+                        <prompt selectionType="RANDOM">
+                         
+                            <item>I am sorry, My knowledge is limited. I don't know the answer. would you like to connect to a customer care representative?</item>
+                            <item>I dont understand what you are asking. Would you like to talk with a customer care representative?</item>
+                        </prompt>
+                    </output>
+                </default>
+            </getUserInput>
+        </folder>
+        <folder label="Library">
+            <folder label="Live Content" id="folder_2449611">
+                <input>
+                    <grammar>
+                        <item>What are the features of an ICICI Bank Recurring Deposit?</item>
+                        <item>$ what are the features of a recurring deposit</item>
+                        <item>$ features of recurring bank desposit</item>
+                        <item>Why should i have a recurring desposit in ICICI?</item>
+                        <item>$ list toppings * available</item>
+                        <item>$ what pros of recurring </item>
+                    </grammar>
+                    <output>
+                        <prompt selectionType="RANDOM">
+                            <item>High rates of interest, identical to the fixed deposit rates.
+                                Check on recurring account receivable, recurring account payable, recurring account fees and all recurring debit account transactions.
+                                Avail loan against your ICICI Bank Recurring Deposit.
+                                Minimum balance of Rs. 500 per month; deposits thereafter in multiples of Rs.100.
+                                Minimum deposit period is 6 months, and thereafter in multiples of 3 months.
+                                Nomination facility.</item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>How can you help?</item>
+                            <item>what can you do?</item>
+                            <item>$ help</item>
+                            <item>$ help me $</item>
+                        </grammar>
+                        <output>
+                            <prompt selectionType="RANDOM">
+                                <item>
+                                    I am your personal assistant. I can answer all your queries you might have regarding the bank. Currently I am trained only for answering questions regarding to Recurring Deposit. Apart from answering your questions. You can also give feedback to the bank through me. I can also alert you about interesting offers you can avail through your card. :) 
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>*interest rates</item>
+                            <item> $ interest rates </item>
+                            <item> *interest rates * </item>
+                            <item> * rates of interest* </item>
+                            <item> * rates of interest </item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item>
+                                    The interest rates depend on the maturity period. They range from 7.00% for 6 months to 7.5% for 5 - 10 years. You can find more details at http://www.icicibank.com/interest-rates.page
+                                </item>
+                            </prompt>
+                        </output>
+
+                    </input>
+                    <input>
+                        <grammar>
+                            <item> I have a complaint </item>
+                            <item> * complain </item>
+                            <item> *feedback </item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item> I am sorry to hear that. We will try out best to improve our services</item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>
+                                * yet
+                            </item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item> We are sorry for the inconvinience caued. We will look into this and get back to you soon </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>Schedule a meeting</item>
+                            <item>I want to meet my personal banker</item>
+                            <item>* meet * banker</item>
+                            <item> *meeting * personal banker* </item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item>
+                                    Scheduling a meeting with your personal banker: Mr Subramaniyam.......
+                                    Is Monday 1430 fine with you? 
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item> * offers * movie ticket </item>
+                            <item> * movies * offers </item>
+                            <item> * discount * movie tickets </item>
+                            
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item>You are entitled to get a 1 on 1 free for movie tickets booked via BookMyShow. Enjoy your movie  </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>Yes I think that is fine</item>
+                            <item>*i am good with that</item>
+                            <item> that would be fine </item>
+                            <item> yes </item>
+                            <item> That would be great</item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item>
+                                    Thank you. Your meeting has been scheduled. Monday 1430 hrs with Mr Subramaniyan
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>* minimum deposit required</item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item>
+                                    You can open a Recurring Deposit account for a minimum deposit of Rs 500/- per month.
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item> * TDS applicable* </item>
+                            <item> * TDS applicability *</item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item>
+                                    Tax Deduction at Source (TDS) will be applicable on interest paid/ accrued on Recurring Deposits. In case the deposit holder does not want the Tax to be deducted at source, they may submit Form 15G / 15H (other than company, firm or co-operative society)/ Exemption Certificate under Section 197 (in case of all holders)/ or any other Tax Exemption Certificate with the Bank. Such form or tax exemption certificate has to be submitted every financial year for each recurring deposit held with the Bank.
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>Thanks*</item>
+                            <item>Thank you*</item>
+                            <item>Thanks</item>
+                            <item>Thank you</item>
+                        </grammar>
+                        <output selectionType="RANDOM">
+                            <prompt>
+                                <item>
+                                    Thats what I am here for 
+                                </item>
+                                <item>
+                                    Always a pleasure. Anything else I can help with.
+                                </item>
+                                <item>
+                                    You are welcome.
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item> * range of tenure*</item>
+                            <item> * range of tenure</item>
+                        </grammar>
+                        <output>
+                            <prompt>
+                                <item>
+                                    You can open a Recurring Deposit for a minimum period of 6 months, and thereafter in multiples of 3 months upto a maximum period of 10 years.
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>* approach * to open a Recurring deposit </item>
+                            <item> * open a recurring deposit * </item>
+                            <item> * open a recurring deposit</item>
+                        </grammar>
+
+                        <output>
+                            <prompt>
+                                <item>
+                                    You can apply online http://www.icicibank.com/Personal-Banking/account-online/fixed-deposit/fixed-deposit.page. You can also just walk into any of our branches
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    <input>
+                        <grammar>
+                            <item>that would be all</item>
+                        </grammar>
+                        <output selectionType="RANDOM">
+                            <prompt>
+                                <item>
+                                    If you need anythning, you know where to find me.
+                                </item>
+                                <item>
+                                    Dont hesitate to ask me if you need anything else
+                                </item>
+                                <item>
+                                    I am always at your service
+                                </item>
+                            </prompt>
+                        </output>
+                    </input>
+                    
+                </folder>
+                <folder label="Storage"/>
+            </folder>
+            <folder label="Global"/>
+            <folder label="Concepts"/>
+        </flow>
+        <constants>
+            <var_folder name="Home"/>
+        </constants>
+        <variables>
+            <var_folder name="Home"/>
+        </variables>
+        <settings>
+            <setting name="USERIDNUM" type="USER">69810</setting>
+            <setting name="EMAIL" type="USER">mwacho@gmail.com</setting>
+            <setting name="PASSWORD" type="USER">mct:f972618f697988c5f1808da2115a54f0</setting>
+            <setting name="FIRSTNAME" type="USER">Matthew</setting>
+            <setting name="LASTNAME" type="USER">james Wachowiak</setting>
+            <setting name="COUNTRY" type="USER">US</setting>
+            <setting name="STATE" type="USER"></setting>
+            <setting name="CITY" type="USER">New York</setting>
+            <setting name="BDAY" type="USER">1</setting>
+            <setting name="BMONTH" type="USER">1</setting>
+            <setting name="BYEAR" type="USER">2001</setting>
+            <setting name="SEX" type="USER">Male</setting>
+            <setting name="DISPLAYNAME" type="USER">Matthew</setting>
+            <setting name="PROVIDESECURITYPASSWORD" type="USER">false</setting>
+            <setting name="SECURITYPASSWORD" type="USER"></setting>
+            <setting name="SHOWPERSPROFILE" type="USER">false</setting>
+            <setting name="USETYPE" type="USER">0</setting>
+            <setting name="DATEJOINED" type="USER">2015-03-30 15:08:32.0</setting>
+            <setting name="LASTLOGIN" type="USER">2015-03-30 15:08:32.0</setting>
+            <setting name="LOGINCOUNT" type="USER">1</setting>
+            <setting name="CREDIT" type="USER">-100</setting>
+            <setting name="CONVCOUNT" type="USER">2</setting>
+            <setting name="PERSONALITYTYPEID" type="USER">6</setting>
+            <setting name="SHOWSENDMESSAGE" type="USER">true</setting>
+            <setting name="ACTIVATED" type="USER">true</setting>
+            <setting name="MESSENGEREMAIL" type="USER"></setting>
+            <setting name="MESSENGERPASSWORD" type="USER"></setting>
+            <setting name="SENDCHATEMAIL" type="USER">true</setting>
+            <setting name="SENDFAVEMAIL" type="USER">true</setting>
+            <setting name="CACHE" type="USER">false</setting>
+            <setting name="CLASSTYPE" type="USER">3</setting>
+            <setting name="AUTOLEARN" type="USER">false</setting>
+            <setting name="LANGUAGE" type="USER">EN</setting>
+            <setting name="RESPONSETIME" type="USER">0</setting>
+            <setting name="MAXAUTOLEARNITEMS" type="USER">0</setting>
+            <setting name="NUMAUTOSETRELATED" type="USER">0</setting>
+            <setting name="TIMEZONEID" type="USER">Australia/Sydney</setting>
+            <setting name="AUTOSETRELATEDNODEID" type="USER">0</setting>
+            <setting name="RETURNTOCHATNODEID" type="USER">0</setting>
+            <setting name="INPUTMASKTYPE" type="USER">0</setting>
+            <setting name="NUMLOGINATTEMPTS" type="USER">0</setting>
+            <setting name="CONCEPTMATCHING" type="USER">0</setting>
+        </settings>
+    </dialog>
